@@ -1,0 +1,180 @@
+@use '../../../styles/vars';
+
+@media (max-width: 768px) { 
+  .left {
+    transform: rotate(180deg);
+    float:left;
+  }
+
+  .right {
+    float:right;
+  }
+
+  .review {
+    &-title {
+      padding-left: calc(vars.$gutter * 1);
+    }
+
+    &-content {
+      padding-top: calc(vars.$gutter * 1);
+    }
+
+    &-author {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      margin-top: calc(vars.$gutter * 2);
+   
+      &--name {
+        padding-right: calc(vars.$gutter * 1);
+        margin-left: calc(vars.$gutter * 3);
+      }
+
+      &--avatar {
+        width: 50px;
+        float: left;
+        border-radius: 50%;
+      }
+    }
+
+    &-container {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+
+      &-outer {
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+        overflow: hidden;
+        margin: calc(vars.$gutter * 2);
+      }
+    }
+
+    &-post {
+      width: 100%;
+      flex-shrink: 0;
+      order: 1;
+      opacity: 0;
+      transition: opacity 1.2s ease-in-out;
+      padding: vars.$gutter;
+
+      &--active {
+        order: 0;
+        opacity: 1;
+    }
+  }
+
+  &-controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: vars.$gutter;
+    
+    &-item {
+      width: 15px;
+      height: 15px;
+      margin: 0 calc(vars.$gutter / 4);
+      border: 1px solid vars.$thirdColor;
+      background: transparent;
+      border-radius: 50%;
+      transition: all .3s ease-in-out;
+      cursor: pointer;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
+
+      &--active {
+        background: vars.$thirdColor;
+      }
+    }
+  }
+  }
+}
+
+
+@media (min-width: 768px) { 
+  .left {
+    transform: rotate(180deg);
+    float: left;
+  }
+
+  .right {
+    float: right;
+  }
+
+  .review {
+    &-content {
+      margin-top: calc(vars.$gutter * 1);
+    }
+
+    &-author {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      margin-top: calc(vars.$gutter * 1);
+   
+      &--name {
+        padding-right: calc(vars.$gutter * 1);
+        margin-left: calc(vars.$gutter * 3);
+      }
+
+      &--avatar {
+        width: 50px;
+        float: left;
+        border-radius: 50%;
+      }      
+    }
+
+    h4 {
+      padding-left: calc(vars.$gutter * 1);
+    }
+
+    &-container {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+
+      &-outer {
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+        overflow: hidden;
+        margin-right: calc(vars.$gutter * 3);
+      }
+    }
+
+    &-post {
+      width: 100%;
+      flex-shrink: 0;
+      order: 1;
+      opacity: 0;
+      padding: calc(vars.$gutter * 2);
+      transition: opacity 1.2s ease-in-out;
+
+      &--active {
+        order: 0;
+        opacity: 1;
+      }
+    }
+
+    &-controls {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: calc(vars.$gutter * 2);
+      
+      &-item {
+        width: 15px;
+        height: 15px;
+        margin: 0 calc(vars.$gutter / 4);
+        border: 1px solid vars.$thirdColor;
+        background: transparent;
+        border-radius: 50%;
+        transition: all .3s ease-in-out;
+        cursor: pointer;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
+
+        &--active {
+          background: vars.$thirdColor;
+        }
+      }
+    }
+  }
+}

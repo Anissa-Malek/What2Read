@@ -1,0 +1,17 @@
+@use '../../styles/vars';
+
+@media (max-width: 768px) { 
+  .home {
+    &-presentation {
+      margin: calc(vars.$gutter * 1);
+    }
+  }
+}
+
+@media (min-width: 768px) { 
+  .home {
+    &-presentation {
+      max-width: 75vw;
+    }
+  }
+}

@@ -1,0 +1,77 @@
+@use '../../styles/vars';
+
+// responsive mobile first
+@media (max-width: 768px) {
+  strong {
+    font-weight: bolder;
+  }
+  .book {
+    display: flex;
+
+    &-user-profile {
+      display: none;
+    }
+    &-contentGroup {
+        margin: 0 calc(vars.$gutter * 1.5);
+        padding-top: calc(vars.$gutter * 1);
+    }
+    &-content {
+      margin: 0 calc(vars.$gutter * 1.5) calc(vars.$gutter * 1.5) calc(vars.$gutter * 1.5);
+    }
+
+    &-buttonReview {
+      color: vars.$secondaryColor;
+      background-color: vars.$fourthColor;
+      border-radius: 30px;
+      max-width: 80%;
+      font-size: calc(vars.$fontSize * 1);;
+      padding: calc(vars.$gutter * 0.5);
+      margin-top: calc(vars.$gutter * 4);
+      border: none;
+    }
+  }
+}
+
+// responsive desktop
+@media (min-width: 768px) {
+  strong {
+    font-weight: bolder;
+  }
+  .book{
+    margin: 0 calc(vars.$gutter * 1.5);
+    padding-top: calc(vars.$gutter * 1);
+    
+    &-content {
+      &.description {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+
+    &-contentGroup {
+        margin: 0 calc(vars.$gutter * 1.5);
+        padding-top: calc(vars.$gutter * 1);
+    }
+    &-content {
+      margin: 0 calc(vars.$gutter * 1.5) calc(vars.$gutter * 1.5) calc(vars.$gutter * 1.5);
+
+      &.cover {
+        width: 300px;
+        height: 450px;
+        border: #000 1px solid;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+      }
+    }
+
+    &-buttonReview {
+      color: vars.$secondaryColor;
+      background-color: vars.$fourthColor;
+      border-radius: 30px;
+      width: 80%;
+      font-size: calc(vars.$fontSize * 1);;
+      padding: calc(vars.$gutter * 0.5);
+      margin-top: calc(vars.$gutter * 8);
+      border: none;
+    }
+  }
+}

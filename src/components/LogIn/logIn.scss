@@ -1,0 +1,83 @@
+@use '../../styles/vars';
+
+// responsive mobile first
+@media (max-width: 768px) {
+  .logIn {
+    color: vars.$fontColor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-field {
+      background-color: vars.$secondaryColor;
+      color: vars.$fontColor;
+      font-size: calc(vars.$gutter * 1);
+      margin-top: calc(vars.$gutter / 3);
+      width: 100%;
+      height: calc(vars.$gutter * 2);
+      border: none;
+      border-radius: 5px;
+      margin-bottom: calc(vars.$gutter * 2);
+      padding-left: calc(vars.$gutter * 0.5);
+    }
+  
+    &-button {
+      background-color: vars.$secondaryColor;
+      color: vars.$fontColor;
+      font-size: calc(vars.$gutter * 1);
+      width: 35%;
+      height: calc(vars.$gutter * 2);
+      border: none;
+      border-radius: 5px;
+      margin-bottom: calc(vars.$gutter * 1);
+    }
+
+    &-error {
+      color: red;
+      padding-bottom: calc(vars.$gutter * 1);
+    }
+    
+  }
+}
+
+// responsive desktop
+@media (min-width: 768px) {
+  .logIn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-input {
+      width: 60%;
+    }
+
+    &-field {
+      background-color: vars.$secondaryColor;
+      color: vars.$fontColor;
+      font-size: calc(vars.$gutter * 1);
+      margin-top: calc(vars.$gutter / 3);
+      width: 90%;
+      height: calc(vars.$gutter * 2);
+      border: none;
+      border-radius: 5px;
+      margin-bottom: calc(vars.$gutter * 2);
+      padding-left: calc(vars.$gutter * 0.5);
+    }
+  
+    &-button {
+      background-color: vars.$secondaryColor;
+      color: vars.$fontColor;
+      font-size: calc(vars.$gutter * 1);
+      width: 35%;
+      height: calc(vars.$gutter * 2);
+      border: none;
+      border-radius: 5px;
+      margin-bottom: calc(vars.$gutter * 1);
+    }
+
+    &-error {
+      color: red;
+      padding-bottom: calc(vars.$gutter * 1);
+    }
+  }
+}

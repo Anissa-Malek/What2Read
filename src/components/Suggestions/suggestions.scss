@@ -1,0 +1,57 @@
+@use '../../styles/vars';
+
+@media (max-width: 768px) { 
+  .suggestions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &-history {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      &.book {
+        margin: calc(vars.$gutter *1);
+        width: 300px;
+
+        &-cover {
+        position: relative;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        width: 300px;
+        height: auto;
+        }
+      }
+      // hide the last 3 books on mobile, its just for the static integration
+    // &.book:nth-last-child(-n+6) {
+    //   display: none;
+    // }
+    }
+  }
+}
+
+@media (min-width: 768px) { 
+  .suggestions {
+    &-history {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      &.book {
+        margin: calc(vars.$gutter *1);
+        width: 300px;
+
+        h3, h4 {
+          text-align: center;
+        }
+
+        &-cover {
+        position: relative;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        width: 300px;
+        height: 450px;
+        }
+      }
+    }
+  }
+}

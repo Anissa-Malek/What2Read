@@ -1,0 +1,115 @@
+@use '../../styles/vars';
+
+// responsive mobile first
+@media (max-width: 768px) {
+  .readings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    h3, h4 {
+      text-align: center;
+    }
+    
+    &-buttonRead {
+      &-toggle{
+        color: vars.$mainColor;;
+        background-color: vars.$thirdColor;
+        margin: calc(vars.$gutter * 1);
+        border-radius: 30px;
+        width: 30%;
+        font-size: calc(vars.$fontSize * 1);;
+        padding: calc(vars.$gutter * 0.5);
+        border: none;
+      }
+    }
+
+    &-book {
+      width:300px;
+
+      margin-bottom: calc(vars.$gutter * 1);
+
+      &--cover {
+        position: relative;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        width: 300px;
+        height: 450px;
+
+        & > .review-done {
+          top: 1%;
+          right: 1%;
+          position: absolute;
+        }
+      }
+      &--subtitle {
+        margin-bottom: calc(vars.$gutter * 2);
+      }
+    }
+
+    &-book:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+// responsive desktop
+@media (min-width: 768px) {
+  .readings {
+    display: flex;
+    flex-direction: column;
+
+    &-buttonRead {
+      &-toggle{
+        color: vars.$mainColor;;
+        background-color: vars.$thirdColor;
+        margin: calc(vars.$gutter * 1);
+        border-radius: 30px;
+        width: 30%;
+        font-size: calc(vars.$fontSize * 1);;
+        padding: calc(vars.$gutter * 0.5);
+        border: none;
+      }
+    }
+       
+    &-books {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &-book:hover {
+      cursor: pointer;
+    }
+
+    &-book {
+      width: 300px;
+      margin: calc(vars.$gutter *1);
+
+      h3, h4 {
+        text-align: center;
+      }
+
+      &--cover {
+      position: relative;
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+      width: 300px;
+      height: 450px;
+
+        & > .review-done {
+          top: 10px;
+          right: 10px;
+          position: absolute;
+          border-radius: 50%;
+          box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+        }
+
+        & > .review-done:hover {
+          -ms-transform: scale(1.5); /* IE 9 */
+          -webkit-transform: scale(1.5); /* Safari 3-8 */
+          transform: scale(1.5);
+        }
+      }
+    }
+  }
+}
+

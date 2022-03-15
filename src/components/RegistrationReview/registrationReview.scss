@@ -1,0 +1,132 @@
+@use '../../styles/vars';
+
+// responsive mobile first
+@media (max-width: 768px) {
+  .addReview {
+    &-jumbotron {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      img {
+        display: none;
+      }
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: calc(vars.$gutter * 2);
+
+    &-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      textarea {
+        resize: none;
+      }
+      &.book {
+        width: auto;
+        max-width: 100%;
+        margin: calc(vars.$gutter * 0.5);
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+      }
+    }
+    &-field {
+      background-color: vars.$secondaryColor;
+      font-size: 1em;
+      width: 100%;
+      border: none;
+      border-radius: 5px;
+      margin-top: calc(vars.$gutter * 1);
+
+      &.title {
+        padding: calc(vars.$gutter * 1);
+      }
+
+      &.content {
+        position:relative;
+        padding: calc(vars.$gutter * 1);
+        margin-bottom: calc(vars.$gutter * 1);
+        height: 14em;
+      }
+      &.content::placeholder {
+        position: absolute;
+      }
+    }
+    &-submit {
+      background-color: vars.$secondaryColor;
+      color: vars.$fontColor;
+      font-size: 1em;
+      width: 35%;
+      height: 2em;
+      border: none;
+      border-radius: 5px;
+    }
+    &-error {
+      color:red;
+    }
+  } 
+}
+
+@media (min-width: 768px) {
+  .addReview {
+
+    h3 {
+      display: none;
+    }
+    &-jumbotron {
+      display: flex;
+      margin: calc(vars.$gutter * 2) 0;
+      textarea {
+        width: 100%;
+        resize: none;
+      }
+      img {
+        width: 200px;
+        margin-right: calc(vars.$gutter * 2);
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+      }
+    }
+    &-form {
+      margin-right: calc(vars.$gutter * 2);
+      > img {
+        display: none;
+      }
+      label {
+        display: block;
+        margin: calc(vars.$gutter * 0.5) 0;
+        color: vars.$thirdColor;
+        font-size: 2em;
+      }
+    }
+
+    &-field {
+      background-color: vars.$secondaryColor;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+
+      &.title {
+        padding: calc(vars.$gutter * 1);
+        width: 100%;
+      }
+      &.content {
+        padding: calc(vars.$gutter * 1);
+      }
+  }
+  &-submit {
+    display: table;
+    margin-left: auto;
+    background-color: vars.$secondaryColor;
+    color: vars.$fontColor;
+    font-size: 1em;
+    width: 15%;
+    height: 2em;
+    border: none;
+    border-radius: 5px;
+  }
+  &-error {
+    color:red;
+  }
+}
+}
